@@ -8,7 +8,7 @@
 [travis-image]: https://img.shields.io/travis/Flet/standard-json.svg?style=flat-square
 [travis-url]: https://travis-ci.org/Flet/standard-json
 
-Format JavaScript Standard Style output to a JSON array.
+Format JavaScript Standard Style output to a JSON array!
 
 ## Install
 
