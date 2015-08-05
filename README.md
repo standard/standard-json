@@ -2,11 +2,14 @@
 
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
-
+[![downloads][downloads-image]][downloads-url]
+ 
 [npm-image]: https://img.shields.io/npm/v/standard-json.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/standard-json
 [travis-image]: https://img.shields.io/travis/Flet/standard-json.svg?style=flat-square
 [travis-url]: https://travis-ci.org/Flet/standard-json
+[downloads-image]: https://img.shields.io/npm/dm/standard-json.svg?style=flat
+[downloads-url]: https://npmjs.org/package/standard-json
 
 Format JavaScript Standard Style output to a JSON array!
 
