@@ -10,7 +10,10 @@ var stream = process.stdin
 var concatStream = concat({encoding: 'string'}, function (data) {
   var output = makeJson(data)
   console.log(JSON.stringify(output))
-  if (output.length > 0) process.exit(1)
+
+  process.stdout.on('finish', function () {
+    if (output.length > 0) process.exit(1)
+  })
 })
 stream.pipe(concatStream)
 
