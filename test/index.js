@@ -10,7 +10,7 @@ test('standard-json', function (t) {
 
   var output = jsonify(data)
 
-  t.deepEqual(dataJson, output, 'JSON formatted')
+  t.deepEqual(output, dataJson, 'JSON formatted')
 })
 
 test('standard-json verbose', function (t) {
@@ -20,5 +20,5 @@ test('standard-json verbose', function (t) {
 
   var output = jsonify(data)
 
-  t.deepEqual(dataJson, output, 'JSON formatted')
+  t.deepEqual(output, dataJson, 'JSON formatted')
 })
