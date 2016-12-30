@@ -22,3 +22,13 @@ test('standard-json verbose', function (t) {
 
   t.deepEqual(output, dataJson, 'JSON formatted')
 })
+
+test('standard-json parenthesis in message', function (t) {
+  t.plan(1)
+  var data = fs.readFileSync(path.join(__dirname, 'data-paren-in-msg.txt'), {encoding: 'utf8'})
+  var dataJson = [ { filePath: '/someplace/index.js', messages: [ { column: '18', line: '1', message: 'Missing \'()\' invoking a constructor.', ruleId: undefined } ] } ]
+
+  var output = jsonify(data)
+
+  t.deepEqual(output, dataJson, 'JSON formatted')
+})

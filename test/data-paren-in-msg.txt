@@ -1,0 +1,3 @@
+standard: Use JavaScript Standard Style (http://standardjs.com)
+standard: Run `standard --fix` to automatically fix some problems.
+  /someplace/index.js:1:18: Missing '()' invoking a constructor.
