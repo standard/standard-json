@@ -6,8 +6,8 @@
  
 [npm-image]: https://img.shields.io/npm/v/standard-json.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/standard-json
-[travis-image]: https://img.shields.io/travis/Flet/standard-json.svg?style=flat-square
-[travis-url]: https://travis-ci.org/Flet/standard-json
+[travis-image]: https://img.shields.io/travis/standard/standard-json.svg?style=flat-square
+[travis-url]: https://travis-ci.org/standard/standard-json
 [downloads-image]: https://img.shields.io/npm/dm/standard-json.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard-json
 
@@ -110,8 +110,8 @@ var output = standardJson(txt, {noisey: true})
 ## Inspiration
 
 This package was inspired by:
-- [snazzy](https://github.com/feross/snazzy)
-- https://github.com/feross/standard/issues/222
+- [snazzy](https://github.com/standard/snazzy)
+- https://github.com/standard/standard/issues/222
 
 
 ## Contributing
