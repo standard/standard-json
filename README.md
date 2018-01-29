@@ -1,5 +1,7 @@
 # standard-json
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/standard/standard-json.svg)](https://greenkeeper.io/)
+
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
 [![downloads][downloads-image]][downloads-url]
