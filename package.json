@@ -1,7 +1,7 @@
 {
   "name": "standard-json",
   "description": "Format JavaScript Standard Style output to a JSON array.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Dan Flettre <fletd01@yahoo.com>",
   "bin": {
     "standard-json": "./bin.js"
