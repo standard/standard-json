@@ -7,7 +7,7 @@ process.stdout.on('error', function () {})
 
 var stream = process.stdin
 
-var concatStream = concat({encoding: 'string'}, function (data) {
+var concatStream = concat({ encoding: 'string' }, function (data) {
   var output = makeJson(data)
   process.exitCode = output.length ? 1 : 0
   console.log(JSON.stringify(output))

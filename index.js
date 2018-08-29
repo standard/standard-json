@@ -1,7 +1,7 @@
 module.exports = jsonify
 
 function jsonify (rawtext, opts) {
-  opts = opts || {noisey: false}
+  opts = opts || { noisey: false }
   var lines = rawtext.split('\n')
   if (lines[lines.length - 1] === '') lines.pop()
 
