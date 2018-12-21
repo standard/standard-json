@@ -32,6 +32,6 @@
     "test": "standard && tape test/*.js | tap-spec"
   },
   "dependencies": {
-    "concat-stream": "^1.5.0"
+    "concat-stream": "^2.0.0"
   }
 }
