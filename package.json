@@ -9,10 +9,12 @@
   "bugs": {
     "url": "https://github.com/flet/standard-json/issues"
   },
+  "dependencies": {
+    "concat-stream": "^2.0.0"
+  },
   "devDependencies": {
     "minicat": "^1.0.0",
     "standard": "*",
-    "tap-spec": "^5.0.0",
     "tape": "^4.0.0"
   },
   "homepage": "https://github.com/flet/standard-json",
@@ -30,9 +32,6 @@
     "url": "https://github.com/flet/standard-json.git"
   },
   "scripts": {
-    "test": "standard && tape test/*.js | tap-spec"
-  },
-  "dependencies": {
-    "concat-stream": "^2.0.0"
+    "test": "standard && tape test/*.js"
   }
 }
