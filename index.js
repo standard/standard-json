@@ -8,25 +8,26 @@ function jsonify (rawtext, opts) {
   var results = []
   var resultMap = {}
   lines.forEach(function (line) {
-    var re = /\s*([^:]+):([^:]+):([^:]+): (.*?)( \((.*)\))?$/.exec(line)
+    var re = /\s*([A-Za-z]:)?([^:]+):([^:]+):([^:]+): (.*?)( \((.*)\))?$/.exec(line)
     if (!re) return opts.noisey ? console.error(line) : null
+    if (re[1] === undefined) re[1] = ''
 
-    var filePath = re[1]
+    var filePath = re[1] + re[2]
 
     var result = resultMap[filePath]
     if (!result) {
       result = resultMap[filePath] = {
-        filePath: re[1],
+        filePath: re[1] + re[2],
         messages: []
       }
       results.push(result)
     }
 
     result.messages.push({
-      line: re[2],
-      column: re[3],
-      message: re[4].trim(),
-      ruleId: re[6]
+      line: re[3],
+      column: re[4],
+      message: re[5].trim(),
+      ruleId: re[7]
     })
   })
 

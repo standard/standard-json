@@ -49,6 +49,29 @@ test('standard-json verbose', function (t) {
   t.deepEqual(output, dataJson, 'JSON formatted')
 })
 
+test('standard-json verbose with Windows path', function (t) {
+  t.plan(1)
+  var data = fs.readFileSync(path.join(__dirname, 'data-verbose-windows.txt'), { encoding: 'utf8' })
+  var dataJson = [{
+    filePath: 'D:\\someplace\\index.js',
+    messages: [{
+      line: '5',
+      column: '23',
+      message: 'Strings must use singlequote.',
+      ruleId: 'quotes'
+    }, {
+      line: '15',
+      column: '36',
+      message: 'Extra semicolon.',
+      ruleId: 'semi'
+    }]
+  }]
+
+  var output = jsonify(data)
+
+  t.deepEqual(output, dataJson, 'JSON formatted')
+})
+
 test('standard-json parenthesis in message', function (t) {
   t.plan(1)
   var data = fs.readFileSync(path.join(__dirname, 'data-paren-in-msg.txt'), { encoding: 'utf8' })

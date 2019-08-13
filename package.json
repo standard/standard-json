@@ -10,6 +10,7 @@
     "url": "https://github.com/flet/standard-json/issues"
   },
   "devDependencies": {
+    "minicat": "^1.0.0",
     "standard": "*",
     "tap-spec": "^5.0.0",
     "tape": "^4.0.0"

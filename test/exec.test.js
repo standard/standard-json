@@ -6,7 +6,7 @@ var binfile = path.resolve(__dirname, '..', 'bin.js')
 var catfile = path.resolve(__dirname, 'data-verbose.txt')
 
 test('return error code 1 if data passed in', function (t) {
-  var cmd = 'cat ' + catfile + ' | node ' + binfile
+  var cmd = 'minicat ' + catfile + ' | node ' + binfile
   exec(cmd, function (err, stdout, stderr) {
     t.ok(stdout.length > 0, 'stdout is correct')
     t.equals(err.code, 1, 'correctly exits with code 1')
