@@ -2,19 +2,19 @@ module.exports = jsonify
 
 function jsonify (rawtext, opts) {
   opts = opts || { noisey: false }
-  var lines = rawtext.split('\n')
+  const lines = rawtext.split('\n')
   if (lines[lines.length - 1] === '') lines.pop()
 
-  var results = []
-  var resultMap = {}
+  const results = []
+  const resultMap = {}
   lines.forEach(function (line) {
-    var re = /\s*([A-Za-z]:)?([^:]+):([^:]+):([^:]+): (.*?)( \((.*)\))?$/.exec(line)
+    const re = /\s*([A-Za-z]:)?([^:]+):([^:]+):([^:]+): (.*?)( \((.*)\))?$/.exec(line)
     if (!re) return opts.noisey ? console.error(line) : null
     if (re[1] === undefined) re[1] = ''
 
-    var filePath = re[1] + re[2]
+    const filePath = re[1] + re[2]
 
-    var result = resultMap[filePath]
+    let result = resultMap[filePath]
     if (!result) {
       result = resultMap[filePath] = {
         filePath: re[1] + re[2],
