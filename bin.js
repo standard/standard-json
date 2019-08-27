@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-var makeJson = require('./index.js')
-var concat = require('concat-stream')
+const makeJson = require('./index.js')
+const concat = require('concat-stream')
 
 process.stdout.on('error', function () {})
 
-var stream = process.stdin
+const stream = process.stdin
 
-var concatStream = concat({ encoding: 'string' }, function (data) {
-  var output = makeJson(data)
+const concatStream = concat({ encoding: 'string' }, function (data) {
+  const output = makeJson(data)
   process.exitCode = output.length ? 1 : 0
   console.log(JSON.stringify(output))
 })
