@@ -1,0 +1,4 @@
+standard: Use JavaScript Standard Style (https://standardjs.com)
+standard: Some warnings are present which will be errors in the next version (https://standardjs.com)
+  /someplace/index.js:2:1: 'hello' is not defined. (no-undef)
+  /someplace/index.js:2:11: Expected property shorthand. (object-shorthand) (warning)

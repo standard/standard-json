@@ -8,8 +8,15 @@ function jsonify (rawtext, opts) {
   const results = []
   const resultMap = {}
   lines.forEach(function (line) {
+    const originalLine = line
+    let messageType = 'error'
+    if (line.endsWith(' (warning)')) {
+      line = line.slice(0, -10)
+      messageType = 'warning'
+    }
+
     const re = /\s*([A-Za-z]:)?([^:]+):([^:]+):([^:]+): (.*?)( \((.*)\))?$/.exec(line)
-    if (!re) return opts.noisey ? console.error(line) : null
+    if (!re) return opts.noisey ? console.error(originalLine) : null
     if (re[1] === undefined) re[1] = ''
 
     const filePath = re[1] + re[2]
@@ -27,7 +34,8 @@ function jsonify (rawtext, opts) {
       line: re[3],
       column: re[4],
       message: re[5].trim(),
-      ruleId: re[7]
+      ruleId: re[7],
+      type: messageType
     })
   })
 
